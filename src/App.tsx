@@ -2,8 +2,7 @@ import "./App.css";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
-
-("536fe7b4b41d40688b68b6b9144c55db APIKEY");
+import theme from "./Theme";
 
 function App() {
   return (
