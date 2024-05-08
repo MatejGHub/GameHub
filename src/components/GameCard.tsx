@@ -6,10 +6,13 @@ import {
   Button,
   ButtonGroup,
   Stack,
-  Heading
+  Heading,
+  Grid,
+  GridItem
 } from "@chakra-ui/react";
 import { Game } from "../hooks/useGames";
 import PlatformIconList from "../components/PlatformIconList";
+import GameRating from "./GameRating";
 
 interface Props {
   game: Game;
@@ -22,7 +25,17 @@ const GameCard = ({ game }: Props) => {
         <Image src={game.background_image} />
         <CardBody>
           <Stack mt="6" spacing="3">
-            <Heading size="md">{game.name}</Heading>
+            <Grid
+              templateRows="repeat(1, 1fr)"
+              templateColumns="repeat(10, 1fr)"
+            >
+              <GridItem colSpan={9}>
+                <Heading size="md">{game.name}</Heading>
+              </GridItem>
+              <GridItem colSpan={1}>
+                <GameRating game={game} />
+              </GridItem>
+            </Grid>
             <PlatformIconList
               platform={game.parent_platforms.map((p) => p.platform)}
             />

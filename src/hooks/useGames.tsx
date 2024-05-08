@@ -8,6 +8,7 @@ export interface Game {
   background_image: string;
   released: string;
   parent_platforms: { platform: Platform }[];
+  rating: number;
 }
 
 export interface Platform {
