@@ -3,13 +3,13 @@ import {
   CardBody,
   CardFooter,
   Image,
-  Text,
   Button,
   ButtonGroup,
   Stack,
   Heading
 } from "@chakra-ui/react";
 import { Game } from "../hooks/useGames";
+import PlatformIconList from "../components/PlatformIconList";
 
 interface Props {
   game: Game;
@@ -23,9 +23,9 @@ const GameCard = ({ game }: Props) => {
         <CardBody>
           <Stack mt="6" spacing="3">
             <Heading size="md">{game.name}</Heading>
-            <Text color="blue.600" fontSize="2xl">
-              $19.99
-            </Text>
+            <PlatformIconList
+              platform={game.parent_platforms.map((p) => p.platform)}
+            />
           </Stack>
         </CardBody>
 
