@@ -18,7 +18,7 @@ function App() {
           <NavBar />
         </GridItem>
         <Show above="lg">
-          <GridItem area={"aside"}>
+          <GridItem area={"aside"} paddingX={5} w={"200px"}>
             <GenreList />
           </GridItem>
         </Show>
@@ -29,5 +29,7 @@ function App() {
     </>
   );
 }
+
+// 1. Take care of game card skeletons - width problem
 
 export default App;
