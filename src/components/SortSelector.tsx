@@ -25,7 +25,7 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
 
   return (
     <>
-      <Box paddingStart={2}>
+      <Box paddingStart={3}>
         <Menu>
           <MenuButton as={Button} rightIcon={<BsChevronDown />}>
             Order by:
